@@ -166,6 +166,11 @@ public class ValidationItemControllerV2 {
     @PostMapping("/add") //rejectValue
     public String addItemV4(@ModelAttribute Item item, BindingResult bindingResult , RedirectAttributes redirectAttributes, Model model) {
 
+  /*      if( bindingResult.hasErrors()){
+            log.info("errors={}", bindingResult);
+            return "validation/v2/addForm";
+        } */ //하나의 메세지를 보여주싶은 경우
+
         log.info("objectName={}", bindingResult.getObjectName());
         log.info("target={}", bindingResult.getTarget());
 
