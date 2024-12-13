@@ -12,11 +12,11 @@ public class Item {
 
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "공백x")
     private String itemName;
 
     @NotNull
-    @Range(min = 0, max = 1000000)
+    @Range(min = 1000, max = 1000000)
     private Integer price;
 
     @NotNull
